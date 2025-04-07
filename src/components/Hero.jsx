@@ -5,6 +5,11 @@ export default function Hero() {
     <div className="relative pt-28 pb-20 overflow-hidden bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
+      {/* Animated Background Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-primary-500/20 rounded-full animate-float blur-xl"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary-500/20 rounded-full animate-float delay-300 blur-xl"></div>
+      <div className="absolute top-40 right-20 w-16 h-16 bg-accent-500/20 rounded-full animate-float delay-100 blur-xl"></div>
+      
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="flex-1 animate-fadeIn">
@@ -15,7 +20,7 @@ export default function Hero() {
               Transform your applications with stunning effects, smooth animations, and eye-catching designs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-primary bling-shadow-animate">Get Started</button>
               <button className="btn btn-outline">Learn More</button>
             </div>
           </div>

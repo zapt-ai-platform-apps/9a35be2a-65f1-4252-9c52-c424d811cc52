@@ -54,4 +54,40 @@
           linear-gradient(#fff 0 0);
     mask-composite: exclude;
   }
+
+  .bling-glow {
+    @apply relative transition-all duration-500;
+  }
+
+  .bling-glow::after {
+    content: '';
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 
+           bg-gradient-to-r from-primary-300/40 via-secondary-300/40 to-accent-300/40 blur-xl -z-10;
+  }
+
+  .bling-glow:hover::after {
+    @apply opacity-100;
+  }
+
+  .sparkle {
+    @apply relative inline-block;
+  }
+
+  .sparkle::before {
+    content: "✨";
+    @apply absolute -top-3 -right-3 text-xs opacity-0 transition-all duration-300;
+  }
+
+  .sparkle:hover::before {
+    @apply opacity-100 animate-bounce;
+  }
+
+  .bling-shadow-animate {
+    animation: shadowPulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes shadowPulse {
+    0%, 100% { box-shadow: 0 0 15px 2px rgba(16, 185, 129, 0.2); }
+    50% { box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.4); }
+  }
 }

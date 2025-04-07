@@ -66,6 +66,14 @@ export default {
         pulse: {
           '0%, 100%': { opacity: 1 },
           '50%': { opacity: 0.5 },
+        },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+        shadowPulse: {
+          '0%, 100%': { boxShadow: '0 0 15px 2px rgba(16, 185, 129, 0.2)' },
+          '50%': { boxShadow: '0 0 20px 5px rgba(139, 92, 246, 0.4)' },
         }
       },
       animation: {
@@ -74,6 +82,8 @@ export default {
         fadeIn: 'fadeIn 0.5s ease-out',
         slideUp: 'slideUp 0.5s ease-out',
         pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        bounce: 'bounce 2s ease-in-out infinite',
+        shadowPulse: 'shadowPulse 3s ease-in-out infinite',
       },
       boxShadow: {
         glow: '0 0 15px 2px rgba(16, 185, 129, 0.4)',

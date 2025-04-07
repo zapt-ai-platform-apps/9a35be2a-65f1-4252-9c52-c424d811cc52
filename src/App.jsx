@@ -25,7 +25,7 @@ export default function App() {
         href="https://www.zapt.ai"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-4 left-4 z-40 flex items-center space-x-1 bg-white dark:bg-gray-800 px-3 py-2 rounded-full shadow-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+        className="fixed bottom-4 left-4 z-40 flex items-center space-x-1 bg-white dark:bg-gray-800 px-3 py-2 rounded-full shadow-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors bling-glow"
       >
         <span>Made on ZAPT</span>
         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

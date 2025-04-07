@@ -39,11 +39,15 @@ export default function Contact() {
   };
   
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-300/10 dark:bg-primary-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-300/10 dark:bg-secondary-500/10 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">Get In Touch</span>
+            <span className="gradient-text sparkle">Get In Touch</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have questions or want to learn more? We'd love to hear from you.
@@ -51,15 +55,15 @@ export default function Contact() {
         </div>
         
         <div className="max-w-xl mx-auto">
-          <div className="card">
+          <div className="card bling-border bling-glow">
             {isSubmitted ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center py-8 animate-fadeIn">
+                <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 bling-shadow-animate">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+                <h3 className="text-xl font-semibold mb-2 gradient-text">Message Sent!</h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Thanks for reaching out. We'll get back to you shortly.
                 </p>
@@ -77,7 +81,7 @@ export default function Contact() {
                     value={formState.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 box-border"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 box-border transition-all duration-300 focus:border-primary-500"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -93,7 +97,7 @@ export default function Contact() {
                     value={formState.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 box-border"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 box-border transition-all duration-300 focus:border-primary-500"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -109,14 +113,14 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows="4"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 box-border"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 box-border transition-all duration-300 focus:border-primary-500"
                     disabled={isSubmitting}
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full btn btn-primary flex items-center justify-center"
+                  className="w-full btn btn-primary flex items-center justify-center bling-shadow-animate"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (

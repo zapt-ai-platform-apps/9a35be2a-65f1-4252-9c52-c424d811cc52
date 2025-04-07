@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const features = [
   {
@@ -35,11 +35,15 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-6">
+    <section id="features" className="py-20 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 left-0 w-64 h-64 bg-primary-300/10 dark:bg-primary-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-0 w-80 h-80 bg-secondary-300/10 dark:bg-secondary-500/10 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">Amazing Features</span>
+            <span className="gradient-text sparkle">Amazing Features</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Discover all the ways you can enhance your UI with our collection of features.
@@ -63,10 +67,14 @@ export default function Features() {
 }
 
 function FeatureCard({ icon, title, description, delay }) {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
     <div 
-      className="card hover:shadow-xl hover:-translate-y-1 group"
+      className={`card hover:shadow-xl hover:-translate-y-1 group bling-glow ${isHovered ? 'bling-shadow-animate' : ''}`}
       style={{ animationDelay: `${delay}ms` }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="mb-4 text-4xl group-hover:scale-110 transform transition-transform duration-300">
         {icon}
